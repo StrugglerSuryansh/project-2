@@ -1,0 +1,396 @@
+@font-face {
+ font-family: lol;
+ src: url(./NeueHaasDisplayMediu.ttf);
+}
+@font-face {
+ font-family: lol;
+ font-weight: 100;
+ src: url(./NeueHaasDisplayLight.ttf);
+}
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "lol";
+}
+#main {
+ /* background-color: #000; */
+ position: relative;
+ z-index: 10;
+}
+
+html,
+body {
+ height: 100%;
+ width: 100%;
+}
+
+#page1 {
+ min-height: 100vh;
+ width: 100%;
+ background-color: #efeae3;
+ position: relative;
+ padding: 0 2vw;
+}
+
+#nav {
+ padding: 2vw 0vw;
+ height: 100px;
+ width: 100%;
+ /* background: #000; */
+ display: flex;
+
+ align-items: center;
+ justify-content: space-between;
+}
+
+#nav2 {
+ display: flex;
+ align-items: center;
+ gap: 1vw;
+}
+
+#nav2 h4 {
+ padding: 10px 20px;
+ border: 1px solid rgb(87, 86, 86);
+ border-radius: 50px;
+ /* font-weight: 500; */
+ font-size: 18px;
+ position: relative;
+ overflow: hidden;
+ transition: all ease 0.4s;
+}
+
+#nav2 h4::after {
+ content: "";
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ background-color: black;
+ left: 0;
+ bottom: -100%;
+ border-radius: 50%;
+ transition: all ease 0.4s;
+}
+
+#nav2 h4:hover::after {
+ bottom: 0;
+ border-radius: 0;
+}
+
+#nav2 h4 a {
+ text-decoration: none;
+ color: black;
+ position: relative;
+ z-index: 9;
+}
+
+#nav2 h4:hover a {
+ color: black;
+}
+
+#center {
+ height: 65vh;
+ width: 100%;
+ /* background-color: orange; */
+ display: flex;
+ align-items: flex-end;
+ justify-content: space-between;
+ border-bottom: 1px solid black;
+ padding-bottom: 2.5vw;
+}
+
+#left h3 {
+ width: 30vw;
+ font-size: 1.8vw;
+ line-height: 2vw;
+}
+
+#center h1 {
+ font-size: 10vw;
+ text-align: right;
+ line-height: 8vw;
+}
+
+#page1 video {
+ position: relative;
+ margin-top: 4vw;
+ border-radius: 30px;
+ width: 100%;
+}
+
+#hero-shape {
+ position: absolute;
+ width: 46vw;
+ height: 36vw;
+ right: 0;
+ top: 65vh;
+}
+
+#hero1 {
+ background-color: #fe320a;
+ height: 100%;
+ width: 100%;
+ border-top-left-radius: 50%;
+ border-bottom-left-radius: 50%;
+ filter: blur(10px);
+ position: absolute;
+}
+
+#hero2 {
+ background: linear-gradient(
+  #fe320a,
+  #fe3f0a
+ );
+
+ height: 30vw;
+ width: 30vw;
+ border-radius: 50%;
+ position: absolute;
+ animation-name: anime2;
+ animation-duration: 5s;
+ animation-timing-function: linear;
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+ filter: blur(50px);
+}
+
+#hero3 {
+ background: linear-gradient(
+  #fe320a,
+  #fe3f0a
+ );
+ height: 30vw;
+ position: absolute;
+ width: 30vw;
+ border-radius: 50%;
+ filter: blur(25px);
+ animation-name: anime1;
+ animation-duration: 5s;
+ animation-timing-function: linear;
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+}
+
+@keyframes anime1 {
+ from {
+  transform: translate(55%, -3%);
+ }
+
+ to {
+  transform: translate(0%, 10%);
+ }
+}
+
+@keyframes anime2 {
+ from {
+  transform: translate(5%, -5%);
+ }
+
+ to {
+  transform: translate(-20%, 30%);
+ }
+}
+
+#page2 {
+ min-height: 100vh;
+ width: 100%;
+ background-color: #efeae3;
+ padding: 8vw 0;
+ /* background-color: red; */
+ position: relative;
+}
+
+#moving-text h1 {
+ /* width: 100%;  */
+ font-size: 9vw;
+ display: inline-block; /* jitna size hai utna hi color ayega issey */
+ /* background-color: rgb(150, 205, 223); */
+}
+#gola {
+ height: 30px;
+ width: 30px;
+ background-color: #fe320a;
+ border-radius: 50%;
+ display: inline-block;
+ margin: 1vw 3vw;
+}
+#moving-text {
+ /* background-color: red; */
+ white-space: nowrap;
+ overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar {
+ display: none;
+}
+
+.con {
+ /* margin-bottom: 10px; */
+ display: inline-block;
+
+ white-space: nowrap;
+ animation: move 10s linear;
+ animation-iteration-count: infinite;
+}
+
+.con h1 {
+ font-size: 9vw;
+}
+@keyframes move {
+ from {
+  transform: translate(0);
+ }
+
+ to {
+  transform: translate(-100%);
+ }
+}
+#page2-bottom {
+ height: 80vh;
+ width: 100%;
+ /* background-color: aqua; */
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 4.5vw;
+ position: relative;
+ z-index: 9;
+}
+#page2-bottom h1 {
+ font-size: 4.5vw;
+ width: 50%;
+ line-height: 4vw;
+}
+#bottom-part2 {
+ width: 20%;
+ /* background-color: aqua; */
+}
+#bottom-part2 img {
+ width: 100%;
+ border-radius: 10px;
+}
+#bottom-part2 p {
+ font-weight: 50;
+}
+#page2 #hehe {
+ height: 30vw;
+ width: 30vw;
+ background: linear-gradient(
+  to top,
+  #fe320a,
+  #db390cb0
+ );
+ position: absolute;
+ border-radius: 50%;
+ top: 60%;
+ left: 25%;
+ filter: blur(20px);
+ z-index: 8;
+ animation-name: hehe;
+ animation-duration: 10s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+}
+
+@keyframes hehe {
+ from {
+  transform: translate(15%, -15%)
+   skew(0);
+ }
+ to {
+  transform: translate(-15%, 15%)
+   skew(20deg);
+ }
+}
+#page3 {
+ height: 100vh;
+ width: 100%;
+
+ background-color: #efeae3;
+}
+.elem {
+ height: 100px;
+ position: relative;
+ border-top: 1px solid #000;
+ width: 100%;
+ /* background-color: yellow; */
+ display: flex;
+ align-items: center;
+ padding: 0 2vw;
+ overflow: hidden;
+}
+.elem h1 {
+ font-size: 3vw;
+ position: relative;
+ z-index: 9;
+}
+.elem .overlay {
+ height: 100%;
+ width: 100%;
+ background-color: orange;
+ position: absolute;
+ left: 0%;
+ top: -100%;
+ transition: all ease 0.2s;
+}
+.elem:hover .overlay {
+ top: 0;
+}
+#fixed-image {
+ height: 30vw;
+ width: 24vw;
+ /* background-color: red; */
+ border-radius: 15px;
+ position: fixed;
+ z-index: 99;
+ left: 50%;
+ top: 25%;
+ display: none;
+ background-size: cover;
+ background-position: center;
+}
+
+#page4 {
+ height: 70vh;
+ width: 100%;
+ background-color: #efeae3;
+ padding: 8vw 2vw;
+}
+#page5 {
+ height: 100vh;
+ width: 100%;
+ /* background-color: #000; */
+}
+#footer {
+ height: 100vh;
+ width: 100%;
+ position: fixed;
+ z-index: 9;
+ bottom: 0;
+ color: #efeae3;
+ background-color: #000;
+ display: flex;
+ /* align-items: center; */
+ align-items: flex-end;
+ justify-content: flex-end;
+ flex-direction: column;
+ justify-content: center;
+}
+#footer h1 {
+ font-size: 23vw;
+}
+#footer-dabba {
+ height: 20vh;
+ width: 100%;
+ background-color: #fe320a;
+}
+#footer-bottom {
+ border-top: 1px solid #efeae3;
+ height: 10vh;
+ width: 100%;
+}
+
+
+@media (max-width:600px){
+  
+}
